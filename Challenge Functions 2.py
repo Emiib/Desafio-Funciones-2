@@ -8,6 +8,8 @@ def area_rectangulo(base, height):
     return f"The area of the rectangle is {area}"
 print(area_rectangulo(15,10))
 
+#-----------------------------------------------------------------
+
 #2)
 # Realiza una función llamada area_circulo() 
 # que devuelva el área de un círculo a partir de un radio. 
@@ -21,6 +23,7 @@ def area_circulo(radio):
 
 print(area_circulo(5))
 
+#-----------------------------------------------------------------
 
 #3)
 # Realiza una función llamada relacion()
@@ -40,6 +43,8 @@ def relacion(num_1, num_2):
 
 print(relacion(5,10))
 
+#-----------------------------------------------------------------
+
 #4)
 # Realiza una función llamada intermedio()
 # que a partir de dos números, devuelva su punto intermedio:
@@ -49,6 +54,8 @@ def intermedio(a, b):
     inter = ((a + b)/2)
     return f"The middle number is {inter}"
 print(intermedio(-12, 24))
+
+#-----------------------------------------------------------------
 
 #5)
 # Realizá una función llamada recortar() que reciba tres parámetros.
@@ -70,6 +77,7 @@ def recortar(num, num_inf, num_sup):
         return f"The input number is between {num_inf} and {num_sup}"
 print(recortar(15,0,10))
 
+#-----------------------------------------------------------------
 
 #6) Realiza una función separar()
 # que tome una lista de números enteros y devuelva dos listas ordenadas.
@@ -89,3 +97,25 @@ def separar(lista):
 pares, impares = separar(lista)
 print(pares)
 print(impares)
+
+#-----------------------------------------------------------------
+
+#6) Alternativa sobre la funcion separar()
+# Se utilizar el method .sort() al final una vez se apendeen los valores. 
+
+lista = [6,5,2,1,7]
+def separar(lista):
+    pares = []
+    impares = []
+    for n in lista:
+        if n%2 == 0:
+            pares.append(n)
+        else:
+            impares.append(n)
+    pares.sort()
+    impares.sort()
+    return pares, impares
+pares, impares = separar(lista)
+print(f"Los numeros PARES SON = {pares}")
+print(f"Los numeros IMPARES SON = {impares}")
+
