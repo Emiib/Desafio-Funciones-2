@@ -3,10 +3,10 @@
 # que devuelva el área del rectángulo a partir de una base y una altura. 
 # Calcula el área de un rectángulo de 15 de base y 10 de altura
 
-def area_rectangulo(base, altura):
-    area =(base * altura)
-    return area
-print(f"area_rectangulo(15,10))
+def area_rectangulo(base, height):
+    area =(base * height)
+    return f"The area of the rectangle is {area}"
+print(area_rectangulo(15,10))
 
 #2)
 # Realiza una función llamada area_circulo() 
@@ -14,9 +14,11 @@ print(f"area_rectangulo(15,10))
 # Calcula el área de un círculo de 5 de radio
 
 import math
+from re import X
 def area_circulo(radio):
     area_cir = (math.pi * (radio**2))
-    return area_cir
+    return f"The area of the circle is {area_cir}"
+
 print(area_circulo(5))
 
 
@@ -28,13 +30,13 @@ print(area_circulo(5))
 # 3----- Si ambos números son iguales, debe devolver un 0.
 # Comprueba la relación entre los números: '5 y 10', '10 y 5' y '5 y 5'
 
-def relacion(x, y):
-    if x == y:
-        return "0"
-    elif x < y:
-        return "-1"
-    elif y > y:
-        return "1"
+def relacion(num_1, num_2):
+    if num_1 == num_2:
+        return "0 --> because they are equals"
+    elif num_1 < num_2:
+        return f"-1, since {num_1} is less than {num_2}"
+    elif num_1 > num_2:
+        return f"1, since {num_1} is bigger than {num_2}"
 
 print(relacion(5,10))
 
@@ -45,7 +47,7 @@ print(relacion(5,10))
 
 def intermedio(a, b):
     inter = ((a + b)/2)
-    return inter
+    return f"The middle number is {inter}"
 print(intermedio(-12, 24))
 
 #5)
@@ -59,13 +61,13 @@ print(intermedio(-12, 24))
 # Devolver el número sin cambios si no se supera ningún límite.
 # Comprueba el resultado de recortar 15 entre los límites 0 y 10
 
-def recortar(x, x_inf, x_sup):
-    if x < x_inf:
-        return x_inf
-    elif x > x_sup:
-        return x_sup
-    elif x > x_inf and x < x_sup:
-        return x
+def recortar(num, num_inf, num_sup):
+    if num < num_inf:
+        return f"The input number is lower than {num_inf}"
+    elif num > num_sup:
+        return f"The input number is higher than {num_sup}"
+    elif num > num_inf and num < num_sup:
+        return f"The input number is between {num_inf} and {num_sup}"
 print(recortar(15,0,10))
 
 
