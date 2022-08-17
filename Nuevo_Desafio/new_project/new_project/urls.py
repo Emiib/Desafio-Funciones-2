@@ -17,8 +17,17 @@ from django.contrib import admin
 from django.urls import path
 
 from .views import saludar
+from .views import segunda_vista
+from .views import dia_de_hoy
+from .views import saludo_con_nombre
+from .views import calcula_anio_nacimiento
+from .views import probandohtml
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path("saludar/", saludar),
-]
+    path("segundavista/", segunda_vista),
+    path("Diadehoy/", dia_de_hoy),
+    path("saludoconnombre/<nombre>", saludo_con_nombre),
+    path("anionacimiento/<edad>", calcula_anio_nacimiento),
+    path("probandohtml/", probandohtml),]
