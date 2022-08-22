@@ -1,7 +1,8 @@
-from datetime import datetime
+from datetime import datetime #esto fue para la funcion de "dia de hoy"
 from django.http import HttpResponse
-import datetime
-from django.template import Context, Template
+import datetime #esto fue para la funcion de "dia de hoy"
+from django.template import loader #Context, #Template
+
 
 
 
@@ -29,10 +30,10 @@ def calcula_anio_nacimiento(request, edad):
     return HttpResponse(cadena)
 
 def probandohtml(request):
-    miarchivo=open("D:/Documents/Proyectos python/Emiib/Proyectos y demas/Desafio-Funciones-2/Nuevo_Desafio/template.html")
-    contenido=miarchivo.read()
-    miarchivo.close()
-    plantilla=Template(contenido)
-    contexto=Context()
-    documento=plantilla.render(contexto)
+
+    nom= 'Emiliano'
+    ape= 'Borda' 
+    diccionario={'nombre:',nom, 'apellido:',ape}
+    plantilla=loader.get_template("template.html")
+    documento=plantilla.render(diccionario)
     return HttpResponse(documento)
