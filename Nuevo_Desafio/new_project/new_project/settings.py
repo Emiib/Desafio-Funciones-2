@@ -36,8 +36,7 @@ INSTALLED_APPS = [
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
-    'django.contrib.staticfiles',
-]
+    'django.contrib.staticfiles',]
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -46,26 +45,18 @@ MIDDLEWARE = [
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
-    'django.middleware.clickjacking.XFrameOptionsMiddleware',
-]
+    'django.middleware.clickjacking.XFrameOptionsMiddleware',]
 
 ROOT_URLCONF = 'new_project.urls'
 
-TEMPLATES = [
-    {
-        'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+TEMPLATES = [{'BACKEND': 'django.template.backends.django.DjangoTemplates','DIRS': [D:'Documents/Proyectos python/Emiib/Proyectos y demas/Desafio-Funciones-2/Nuevo_Desafio'],
         'APP_DIRS': True,
-        'OPTIONS': {
-            'context_processors': [
+            'OPTIONS': {
+                'context_processors': [
                 'django.template.context_processors.debug',
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
-                'django.contrib.messages.context_processors.messages',
-            ],
-        },
-    },
-]
+                'django.contrib.messages.context_processors.messages']},},]
 
 WSGI_APPLICATION = 'new_project.wsgi.application'
 
